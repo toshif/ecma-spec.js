@@ -278,9 +278,11 @@ Array.prototype.some = function(callback, thisObject){return true;};
  * Executes a provided function once per array element.
  * 
  * callback is invoked with three arguments:
- * * the element value
- * * the element index
- * * the array being traversed
+ * <ul>
+ *   <li> the element value
+ *   <li> the element index
+ *   <li> the array being traversed
+ * </ul>
  * 
  * <p>
  * Examples :
