@@ -10,7 +10,7 @@
 
  /**
   * Creates a new object with the specified prototype object and properties.
-  * </p>
+  * 
   * <p>
   * Throws a TypeError exception if the proto parameter isn't null or an object.
   * </p>
@@ -36,6 +36,7 @@ Object.create = function(proto, propertiesObject){return "";};
 
 /**
  * Adds the named property described by a given descriptor to an object.
+ * 
  * <p>
  * Examples :
  * <pre>
@@ -277,12 +278,14 @@ Array.prototype.some = function(callback, thisObject){return true;};
 /**
  * Executes a provided function once per array element.
  * 
+ * <p>
  * callback is invoked with three arguments:
  * <ul>
  *   <li> the element value
  *   <li> the element index
  *   <li> the array being traversed
  * </ul>
+ * </p>
  * 
  * <p>
  * Examples :
@@ -377,7 +380,7 @@ Function.prototype.bind = function(thisArg){return function(){};};
  * @returns {String}
  * @since   Standard ECMA-262 5th. Edition 
 */
-String.prototype.trim = function(){};
+String.prototype.trim = function(){return "";};
 
 
 //JSON
