@@ -18,7 +18,9 @@ function Global() {
 }
 
 Global.Math = new Math();
+
 Global.JSON = new JSON();
+
 Global.Date = new Date();
 
 /*

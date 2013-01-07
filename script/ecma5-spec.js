@@ -577,7 +577,7 @@ JSON.prototype = new Object();
  * 
  * @since Standard ECMA-262 5th. Edition
  */
-JSON.prototype.parse = function(text, reviver) {
+JSON.parse = function(text, reviver) {
 	return {};
 };
 
@@ -603,6 +603,6 @@ JSON.prototype.parse = function(text, reviver) {
  * 
  * @since Standard ECMA-262 5th. Edition
  */
-JSON.prototype.stringify = function(value, replacer, space) {
+JSON.stringify = function(value, replacer, space) {
 	return "";
 };
