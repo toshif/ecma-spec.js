@@ -23,8 +23,8 @@ Global.Date = new Date();
 
 /*
  * Although console is an object attached to window and not part of ECMAScript
- * spec, this is included as it's supported in most browsers/platforms which
- * supports ECMAScript as a defact standard.
+ * spec, this is included as it's supported as a defact standard in most
+ * browsers/platforms which support ECMAScript.
  */
 Global.console = new Console();
 
