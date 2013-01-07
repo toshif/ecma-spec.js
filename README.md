@@ -1,6 +1,6 @@
 # ecma-spec.js
 
-It is a set of Javascript files which describe ECMA-262(ECMAScript) related APIs. 
+It is a set of stub Javascript files which declare ECMA-262(ECMAScript) related APIs, using JSDoc. 
 
 # Download
 
@@ -9,10 +9,10 @@ It is a set of Javascript files which describe ECMA-262(ECMAScript) related APIs
 # How to use it
 ## Enable ECMA5 auto-completion in Eclipse JSDT
 
-As of Jan 2013, JSDT supports only ECMA 3 features and ECMA 5 is not supported (i.e. forEach of Array doesn't show up on the auto-completion). 
+As of Jan 2013, JSDT (Eclipse 4.2.1, WTP 3.4.1) supports only ECMA 3 features and ECMA 5 is not supported (i.e. forEach of Array doesn't show up on the auto-completion). 
 You can use them by referring the spec files in your project.  
 
-Copy the 2 files into a directory on included paths in a Javascript project.
+Copy the 2 files under script into a directory on included paths in a Javascript project.
 
 * ecma5-spec.js
 * ecma5-global.js
