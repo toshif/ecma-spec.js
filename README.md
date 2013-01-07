@@ -2,6 +2,10 @@
 
 It is a set of stub Javascript files which declare ECMA-262(ECMAScript) related APIs, using JSDoc. 
 
+ * [ecma5-spec.js](https://github.com/toshif/ecma-spec.js/blob/master/script/ecma5-spec.js) - ECMA5 APIs for features which are not included in ECMA3
+ * [ecma5-global.js](https://github.com/toshif/ecma-spec.js/blob/master/script/ecma5-global.js) - Global object references and console object
+   
+
 # Download
 
 * the latest [zip](https://github.com/toshif/ecma-spec.js/archive/master.zip)
