@@ -12,9 +12,6 @@
  * Creates a new object with the specified prototype object and properties.
  * 
  * <p>
- * Throws a TypeError exception if the proto parameter isn't null or an object.
- * </p>
- * <p>
  * Examples :
  * 
  * <pre>
@@ -34,13 +31,16 @@
  *            proto - The object which should be the prototype of the
  *            newly-created object.
  * @param {Object}
- *            propertiesObject - <b>Optional</b> If specified and not
+ *            propertiesObject - <b>Optional.</b> If specified and not
  *            undefined, an object whose enumerable own properties (that is,
  *            those properties defined upon itself and not enumerable properties
  *            along its prototype chain) specify property descriptors to be
  *            added to the newly-created object, with the corresponding property
  *            names.
  * @returns {Object}
+ * @throws {TypeError}
+ *             thrown if the proto parameter isn't null or an object.
+ * 
  * @since Standard ECMA-262 5th. Edition
  */
 Object.create = function(proto, propertiesObject) {
@@ -98,14 +98,13 @@ Object.defineProperties = function(obj, props) {
 
 /**
  * Returns the prototype of the specified object.
- * <p>
- * Throws a TypeError exception if the object parameter isn't an Object.
- * </p>
  * 
  * @memberOf Object
  * @param {Object}
  *            object - The object whose prototype is to be returned.
  * @returns {Object} obj
+ * @throws {TypeError}
+ *             thrown if the object parameter isn't an Object.
  * @since Standard ECMA-262 5th. Edition
  */
 Object.getPrototypeOf = function(object) {
@@ -308,7 +307,7 @@ Array.isArray = function(obj) {
  * @param {Object}
  *            searchElement - Element to locate in the array.
  * @param {Number}
- *            fromIndex - <b>Optional</b> Element to locate in the array.
+ *            fromIndex - <b>Optional.</b> Element to locate in the array.
  * @returns {Number}
  * @since Standard ECMA-262 5th. Edition
  */
@@ -325,7 +324,7 @@ Array.prototype.indexOf = function(searchElement, fromIndex) {
  * @param {Object}
  *            searchElement - Element to locate in the array.
  * @param {Number}
- *            fromIndex - <b>Optional</b> Element to locate in the array.
+ *            fromIndex - <b>Optional.</b> Element to locate in the array.
  * @returns {Number}
  * @since Standard ECMA-262 5th. Edition
  */
@@ -355,8 +354,8 @@ Array.prototype.lastIndexOf = function(searchElement, fromIndex) {
  * @param {Function}
  *            callback - Function to test for each element.
  * @param {Object}
- *            thisObject - <b>Optional</b> Object to use as this when executing
- *            callback.
+ *            thisObject - <b>Optional.</b> Object to use as this when
+ *            executing callback.
  * @returns {Boolean}
  * @since Standard ECMA-262 5th. Edition
  */
@@ -386,8 +385,8 @@ Array.prototype.every = function(callback, thisObject) {
  * @param {Function}
  *            callback - Function to test for each element.
  * @param {Object}
- *            thisObject - <b>Optional</b> Object to use as this when executing
- *            callback.
+ *            thisObject - <b>Optional.</b> Object to use as this when
+ *            executing callback.
  * @returns {Boolean}
  * @since Standard ECMA-262 5th. Edition
  */
@@ -428,8 +427,8 @@ Array.prototype.some = function(callback, thisObject) {
  * @param {Function}
  *            callback - Function to execute for each element.
  * @param {Object}
- *            thisObject - <b>Optional</b> Object to use as this when executing
- *            callback.
+ *            thisObject - <b>Optional.</b> Object to use as this when
+ *            executing callback.
  * @since Standard ECMA-262 5th. Edition
  */
 Array.prototype.forEach = function(callback, thisObject) {
@@ -444,7 +443,7 @@ Array.prototype.forEach = function(callback, thisObject) {
  *            callback - Function that produces an element of the new Array from
  *            an element of the current one.
  * @param {Object}
- *            thisArg - <b>Optional</b> Object to use as this when executing
+ *            thisArg - <b>Optional.</b> Object to use as this when executing
  *            callback.
  * @returns {Array}
  * @since Standard ECMA-262 5th. Edition
@@ -461,8 +460,8 @@ Array.prototype.map = function(callback, thisArg) {
  * @param {Function}
  *            callback - Function to test each element of the array.
  * @param {Object}
- *            thisObject - <b>Optional</b> Object to use as this when executing
- *            callback.
+ *            thisObject - <b>Optional.</b> Object to use as this when
+ *            executing callback.
  * @returns {Array}
  * @since Standard ECMA-262 5th. Edition
  */
@@ -490,7 +489,7 @@ Array.prototype.filter = function(callback, thisObject) {
  *            callback - Function to execute on each value in the array, taking
  *            four arguments.
  * @param {Object}
- *            initialValue - <b>Optional</b> Object to use as the first
+ *            initialValue - <b>Optional.</b> Object to use as the first
  *            argument to the first call of the callback.
  * @returns {Object}
  * @since Standard ECMA-262 5th. Edition
@@ -507,7 +506,7 @@ Array.prototype.reduce = function(callback, initialValue) {
  * @param {Function}
  *            callback - Function to execute on each value in the array.
  * @param {Object}
- *            initialValue - <b>Optional</b> Object to use as the first
+ *            initialValue - <b>Optional.</b> Object to use as the first
  *            argument to the first call of the callback.
  * @returns {Object}
  * @since Standard ECMA-262 5th. Edition
@@ -546,4 +545,61 @@ String.prototype.trim = function() {
 	return "";
 };
 
-// JSON
+/**
+ * The JSON object contains methods for converting values to JavaScript Object
+ * Notation (JSON) and for converting JSON to values.
+ * 
+ * @constructor
+ * @since Standard ECMA-262 5th. Edition
+ */
+function JSON() {
+}
+JSON.prototype = new Object();
+
+/**
+ * Parse a string as JSON, optionally transforming the value produced by
+ * parsing.
+ * 
+ * @param {String}
+ *            text - The string to parse as JSON
+ * @param {Function}
+ *            reviver - <b>Optional.</b> If a function, prescribes how the
+ *            value originally produced by parsing is transformed, before being
+ *            returned.
+ * @returns {Object}
+ * 
+ * @throws {SyntaxError}
+ *             If the string to parse is not valid JSON, a SyntaxError exception
+ *             is thrown.
+ * 
+ * @since Standard ECMA-262 5th. Edition
+ */
+JSON.prototype.parse = function(text, reviver) {
+	return {};
+};
+
+/**
+ * Parse a string as JSON, optionally transforming the value produced by
+ * parsing.
+ * 
+ * @param {Object}
+ *            value - The value to convert to a JSON string.
+ * @param {Function}
+ *            replacer - Function or String. If a function, transforms values
+ *            and properties encountered while stringifying; if an array,
+ *            specifies the set of properties included in objects in the final
+ *            string.
+ * @param {String}
+ *            space - String or Number. The space argument may be used to
+ *            control spacing in the final string. If it is a number, successive
+ *            levels in the stringification will each be indented by this many
+ *            space characters (up to 10). If it is a string, successive levels
+ *            will indented by this string (or the first ten characters of it).
+ * 
+ * @returns {String}
+ * 
+ * @since Standard ECMA-262 5th. Edition
+ */
+JSON.prototype.stringify = function(value, replacer, space) {
+	return "";
+};
