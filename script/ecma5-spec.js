@@ -6,6 +6,9 @@
  * ECMAScript 5 compatibility table
  * http://kangax.github.com/es5-compat-table/
  * 
+ * Mozilla Developers Network JavaScript Reference 
+ * https://developer.mozilla.org/en-US/docs/JavaScript/Reference
+ * 
  */
 
 /**
